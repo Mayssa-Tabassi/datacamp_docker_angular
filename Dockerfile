@@ -1,6 +1,4 @@
-# =========================
-# STAGE 1 : BUILD
-# =========================
+### STAGE 1: Build ###
 
 FROM node:12.7-alpine AS build
 
@@ -14,9 +12,8 @@ COPY . .
 
 RUN npm run build
 
-# =========================
-# STAGE 2 : RUN
-# =========================
+
+### STAGE 2: Run ###
 
 FROM nginx:1.17.1-alpine
 
